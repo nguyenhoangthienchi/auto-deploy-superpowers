@@ -26,7 +26,6 @@ commands:
       - run:
           name: Revert migrations
           when: on_fail
-          # Add when this will run
           command: |
             SUCCESS=$(curl --insecure https://kvdb.io/TUHHsx8iJ2GQf7sKyY2k98/migration_<<parameters.workflow_id>>)
             echo $SUCCESS
@@ -130,7 +129,6 @@ jobs:
             cd backend
             npm install
             npm audit fix --audit-level=critical --force
-            npm audit fix --audit-level=critical --force
             npm audit --audit-level=critical
 
   deploy-infrastructure:
@@ -186,7 +184,6 @@ jobs:
       - run:
           name: Configure server
           command: |
-            # add environment variables to server
             echo NODE_ENV=production > ~/project/backend/.env
             echo TYPEORM_CONNECTION=$TYPEORM_CONNECTION >> ~/project/backend/.env
             echo TYPEORM_DATABASE=$TYPEORM_DATABASE >> ~/project/backend/.env
