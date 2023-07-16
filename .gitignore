@@ -68,6 +68,5 @@ node_modules
 
 .env
 dist
-screenshot/
 udacity.pem
 key.txt
