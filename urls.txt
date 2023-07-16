@@ -1,0 +1,5 @@
+URL01: https://github.com/nguyenhoangthienchi/auto-deploy-superpowers
+URL02: http://udapeople-ccfd69b.s3-website-us-east-1.amazonaws.com/#/employees
+URL03: http://dla9w1xcg4e44.cloudfront.net/index.html#/employees
+URL04: http://ec2-44-201-244-76.compute-1.amazonaws.com:3030/api/status
+URL05: http://ec2-44-201-244-76.compute-1.amazonaws.com:9090/targets
