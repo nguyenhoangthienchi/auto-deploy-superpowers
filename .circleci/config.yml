@@ -228,10 +228,7 @@ jobs:
       - run:
           name: Send migration results to kvdb
           command: |
-            if grep -q "has been executed successfully" ~/project/backend/migrations_dump.txt
-            then
-              curl --insecure https://kvdb.io/TUHHsx8iJ2GQf7sKyY2k98/migration_${CIRCLE_WORKFLOW_ID:0:7} -d '1'
-            fi
+            curl --insecure https://kvdb.io/TUHHsx8iJ2GQf7sKyY2k98/migration_${CIRCLE_WORKFLOW_ID:0:7} -d '1'
       - destroy-environment:
           workflow_id: ${CIRCLE_WORKFLOW_ID:0:7}
 
